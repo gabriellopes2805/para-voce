@@ -1,0 +1,18 @@
+#loveDiv {
+    gap: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    #leftVid,
+    #rightVid {
+        height: 300px;
+        border-radius: 20px;
+        box-shadow: 0 0 10px #000000aa;
+    }
+
+    #sheImg {
+        height: 300px;
+    }
+}

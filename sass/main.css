@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Comfortaa:wght@300..700&display=swap");
+audio {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Caveat", cursive, sans-serif;
+  background-color: #171717;
+  color: #f3f3f3;
+  overflow-x: hidden;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container {
+  width: 95vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  border: none;
+  color: #f3f3f3;
+  font-size: large;
+  border-radius: 20px;
+  background-color: #f19ed2;
+  transition: all 0.1s ease-in-out;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.04) translate(0, -4px);
+  box-shadow: 0 3px 0px #f3f3f3;
+}
+
+button:active {
+  transform: scale(0.98) translate(0);
+  box-shadow: none;
+}
+
+#nextBtn {
+  font-size: large;
+  position: fixed;
+  bottom: 30px;
+  width: 50px;
+  right: 30px;
+  opacity: 0;
+}
+
+#middlecontainer {
+  display: flex;
+  min-height: 700px;
+  flex-direction: column;
+}
+#middlecontainer #startDiv {
+  gap: 20px;
+  display: flex;
+  font-style: italic;
+  align-self: center;
+  align-items: center;
+  flex-direction: column;
+}
+#middlecontainer h1 {
+  text-shadow: 3px 3px 0px #000000;
+}
+
+b {
+  --speed-weed: 50s;
+  --speed-medium: 10s;
+  --speed-speed: 2s;
+  --speed: var(--speed-medium);
+  position: absolute;
+  top: calc(var(--rnd1) * 100%);
+  left: calc(var(--rnd2) * 100%);
+  animation: var(--speed) drop infinite linear;
+  animation-delay: calc((1 - var(--rnd3)) * -1 * var(--speed));
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-size: 5vmin;
+  pointer-events: none;
+  will-change: transform, filter;
+  transition: all 1s ease-in;
+  opacity: 0;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(-100vh) scale(calc(var(--rnd3) * 2 + 1)) rotate(0deg);
+    filter: blur(calc((1 - var(--rnd3)) * 5px));
+  }
+  25% {
+    filter: blur(0px);
+  }
+  100% {
+    transform: translateY(100vh) scale(calc(var(--rnd3) * 2 + 1)) rotate(1800deg);
+    filter: blur(calc((1 - var(--rnd3)) * 5px));
+  }
+}/*# sourceMappingURL=main.css.map */

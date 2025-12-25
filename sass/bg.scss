@@ -1,0 +1,33 @@
+$black: #171717;
+$white: #f3f3f3;
+$strongPink: #f19ed2;
+
+#bg {
+    z-index: -2;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: radial-gradient(
+        circle at 50% 150%,
+        $black 80%,
+        #f3f3f311 100%
+    );
+    // background-size: cover;
+    // background-position: 20% 130%;
+    // // background-image: url(../images/stellarBg.png);
+    // background-color: $white;
+}
+
+canvas {
+    inset: 0;
+    opacity: 0.0000000001;
+    width: 100%;
+    z-index: -1;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    transition: all 2s;
+    background-color: #000000;
+}
